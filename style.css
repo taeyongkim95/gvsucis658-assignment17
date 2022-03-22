@@ -1,0 +1,13 @@
+header {
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+}
+
+header a {
+  border: 2px solid black;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  background: black;
+  color: white;
+}
