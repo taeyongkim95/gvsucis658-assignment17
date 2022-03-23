@@ -42,9 +42,9 @@
         echo "Logout";
       }?>
     </a>
-    <?php if ($_SESSION['loggedIn'] == true) { ?>
-      <a href="preferences.php">Preferences</a>
-    <?php } else { } ?>
+    <?php if ($_SESSION['loggedIn'] == true) { 
+      echo "<a href="preferences.php">Preferences</a>";
+    } else { } ?>
   </header>
 
 </body>
