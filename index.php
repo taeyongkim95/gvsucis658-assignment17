@@ -36,7 +36,9 @@
   <header>
     <a href="index.php">Home</a>
     <a href="login.php">Login</a>
-    <a href="preferences.php">Preferences</a>
+    <?php if ($_SESSION['loggedIn'] == true) { ?>
+      <a href="preferences.php">Preferences</a>
+    <?php } else { } ?>
   </header>
 
 </body>
