@@ -4,15 +4,6 @@
   if ( !isset($_SESSION['loggedIn']) ) {
     $_SESSION['loggedIn'] = false;
   }
-
-  if (!isset($_COOKIE["displayMode"]) || $_COOKIE["displayMode"] == "light") {
-    setcookie("displayMode", "light", time() + (86400 * 3), "/");
-    $backGroundColor = "#eee";
-    $textColor = "#000";
-  } else {
-    $backGroundColor = "#333";
-    $textColor = "#fff";
-  }
 ?>
 
 <!DOCTYPE html>
@@ -22,15 +13,15 @@
   <meta charset="utf-8">
   <title>Assignment 17 - Home</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      background: <?php echo $backGroundColor;?>;
-      color: <?php echo $textColor;?>;
-    }
-  </style>
 </head>
 
-<body>
+<body class="
+  <?php if (!isset($_COOKIE["displayMode"]) || $_COOKIE["displayMode"] == "light") {
+    echo "light-mode";
+  } else {
+    echo "dark-mode";
+  }?>
+">
 
   <header>
     <a href="index.php">Home</a>
