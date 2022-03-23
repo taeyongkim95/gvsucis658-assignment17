@@ -36,7 +36,7 @@
   <header>
     <a href="index.php">Home</a>
     <a href="login.php">
-      <?php if ($_SESSION['loggedIn'] == true ) {
+      <?php if ($_SESSION['loggedIn'] == false ) {
         echo "Login";
       } else {
         echo "Logout";
