@@ -1,9 +1,11 @@
 <?php
   session_start();
 
-  if ( $_POST['username'] == "CIS658" && $_POST['password'] == "WebArchitectures") {
-    $_SESSION['loggedIn'] = true;
-  }_
+  if (isset($_POST['username']) && isset($_POST['password'])) {
+    if ($_POST['username'] == "CIS658" && $_POST['password'] == "WebArchitectures") {
+      $_SESSION['loggedIn'] = true;
+    }
+  }
 
   if (!isset($_COOKIE[$displayMode]) || $_COOKIE[$displayMode] == "light") {
     $backGroundColor = "#eee";
