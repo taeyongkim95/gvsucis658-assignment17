@@ -1,4 +1,6 @@
 <?php
+  session_start();
+  
   if (isset($_POST['display'])) {
     if ($_POST['display'] == "light") {
       $_COOKIE["displayMode"] = "light";
