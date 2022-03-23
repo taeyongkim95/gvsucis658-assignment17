@@ -4,10 +4,9 @@
   if ( !isset($_SESSION['loggedIn']) ) {
     $_SESSION['loggedIn'] = false;
   }
-  
-  setcookie("displayMode", "light", time() + (86400 * 3), "/");
 
   if (!isset($_COOKIE["displayMode"]) || $_COOKIE["displayMode"] == "light") {
+    setcookie("displayMode", "light", time() + (86400 * 3), "/");
     $backGroundColor = "#eee";
     $textColor = "#000";
   } else {
