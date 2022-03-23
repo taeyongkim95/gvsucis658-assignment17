@@ -3,9 +3,8 @@
 
   $_SESSION['loggedIn'] = false;
   
-  $displayMode = "light";
-  $displayModeCookieName = "Display Mode";
-  setcookie($displayModeCookieName, $displayMode, time() + (86400 * 3), "/");
+  $displayMode = "Display Mode";
+  setcookie($displayMode, "light", time() + (86400 * 3), "/");
 
   if (!isset($_COOKIE[$displayMode]) || $_COOKIE[$displayMode] == "light") {
     $backGroundColor = "#eee";
