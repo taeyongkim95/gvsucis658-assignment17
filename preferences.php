@@ -1,11 +1,11 @@
 <?php
   session_start();
-  
+
   if (isset($_POST['display'])) {
     if ($_POST['display'] == "light") {
-      $_COOKIE["displayMode"] = "light";
+      setcookie("displayMode", "light", time() + (86400 * 3), "/");
     } else {
-      $_COOKIE["displayMode"] = "dark";
+      setcookie("displayMode", "dark", time() + (86400 * 3), "/");
     }
   }
 
