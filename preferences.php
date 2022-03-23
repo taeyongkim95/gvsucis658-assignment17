@@ -55,9 +55,9 @@
     <form action="preferences.php" method="POST">
       <select name="display-mode">
         <option value="light">Light</option>
-        <option value="dark">Dark</option>
-        <input type="submit" value="Set" />
+        <option value="dark">Dark</option>  
       </select>
+      <input type="submit" value="Set" />
     </form>
   <?php } ?>
 
