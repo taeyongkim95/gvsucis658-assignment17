@@ -11,3 +11,8 @@ header a {
   background: black;
   color: white;
 }
+
+.blog-container {
+  margin:0 auto;
+  display:block;
+}
