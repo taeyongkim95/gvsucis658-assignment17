@@ -6,9 +6,9 @@
   }
   
   $displayMode = "Display Mode";
-  setcookie($displayMode, "dark", time() + (86400 * 3), "/");
+  setcookie("what", "dark", time() + (86400 * 3), "/");
 
-  if (!isset($_COOKIE[$displayMode]) || $_COOKIE[$displayMode] == "light") {
+  if (!isset($_COOKIE["what"]) || $_COOKIE["what"] == "light") {
     $backGroundColor = "#eee";
     $textColor = "#000";
   } else {
