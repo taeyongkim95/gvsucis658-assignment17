@@ -25,8 +25,8 @@
   <link rel="stylesheet" href="style.css">
   <style>
     body {
-      background: <?php echo $backGroundColor;?>
-      color: <?php echo $textColor;?>
+      background: <?php echo $backGroundColor;?>;
+      color: <?php echo $textColor;?>;
     }
   </style>
 </head>
