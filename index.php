@@ -4,6 +4,10 @@
   if ( !isset($_SESSION['loggedIn']) ) {
     $_SESSION['loggedIn'] = false;
   }
+
+  if ( !isset($_COOKIE['displayMode']) ) {
+    setcookie("displayMode", "light", time() + (86400 * 3), "/");
+  }
 ?>
 
 <!DOCTYPE html>
