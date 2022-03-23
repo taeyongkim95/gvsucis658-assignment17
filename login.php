@@ -1,6 +1,10 @@
 <?php
   session_start();
 
+  if ( $_POST['username'] == "CIS658" && $_POST['password'] == "WebArchitectures") {
+    $_SESSION['loggedIn'] = true;
+  }_
+
   if (!isset($_COOKIE[$displayMode]) || $_COOKIE[$displayMode] == "light") {
     $backGroundColor = "#eee";
     $textColor = "#000";
@@ -41,7 +45,7 @@
   </header>
 
   <?php if ($_SESSION['loggedIn'] == false) { ?>
-    <form>
+    <form action="login.php" method="POST">
       <input type="text" name="username" placeholder="User Name"/>
       <input type="text" name="password" placeholder="Password"/>
       <input type="submit" />
