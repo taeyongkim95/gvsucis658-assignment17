@@ -1,7 +1,7 @@
 <?php
   session_start();
 
-  $_SESSION['loggedIn'] = false;
+  $_SESSION['loggedIn'] = true;
   
   $displayMode = "light";
   $displayModeCookieName = "Display Mode";
@@ -35,7 +35,13 @@
 
   <header>
     <a href="index.php">Home</a>
-    <a href="login.php">Login</a>
+    <a href="login.php">
+      <?php if ($_SESSION['loggedIn'] == true ) {
+        echo "Login";
+      } else {
+        echo "Logout";
+      }?>
+    </a>
     <?php if ($_SESSION['loggedIn'] == true) { ?>
       <a href="preferences.php">Preferences</a>
     <?php } else { } ?>
