@@ -14,7 +14,7 @@ header a {
   margin:0 1rem;
 }
 
-header form input[type=submit] {
+input[type=submit] {
   border: 2px solid black;
   padding: 1rem 2rem;
   text-decoration: none;
