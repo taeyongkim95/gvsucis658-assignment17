@@ -43,7 +43,7 @@
       }?>
     </a>
     <?php if ($_SESSION['loggedIn'] == true) { 
-      echo "<a href="preferences.php">Preferences</a>";
+      echo "<a href=\"preferences.php\">Preferences</a>";
     } else { } ?>
   </header>
 
