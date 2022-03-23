@@ -1,7 +1,9 @@
 <?php
   session_start();
 
-  $_SESSION['loggedIn'] = false;
+  if (!isset($SESSION['loggedIn'])) {
+    $_SESSION['loggedIn'] = false;
+  }
   
   $displayMode = "Display Mode";
   setcookie($displayMode, "light", time() + (86400 * 3), "/");
