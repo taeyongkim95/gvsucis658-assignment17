@@ -7,7 +7,7 @@
     }
   }
 
-  if (!isset($_COOKIE[$displayMode]) || $_COOKIE[$displayMode] == "light") {
+  if (!isset($_COOKIE["displayMode"]) || $_COOKIE["displayMode"] == "light") {
     $backGroundColor = "#eee";
     $textColor = "#000";
   } else {

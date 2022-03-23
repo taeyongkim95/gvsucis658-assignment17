@@ -1,3 +1,13 @@
+<?php
+  if (!isset($_COOKIE["displayMode"]) || $_COOKIE["displayMode"] == "light") {
+    $backGroundColor = "#eee";
+    $textColor = "#000";
+  } else {
+    $backGroundColor = "#333";
+    $textColor = "#fff";
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
