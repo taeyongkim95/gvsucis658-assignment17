@@ -35,13 +35,16 @@
 
   <header>
     <a href="index.php">Home</a>
-    <a href="login.php">
-      <?php if ($_SESSION['loggedIn'] == false ) {
-        echo "Login";
-      } else {
-        echo "Logout";
-      }?>
-    </a>
+      
+    <?php if ($_SESSION['loggedIn'] == false ) { ?>   
+      <a href="login.php">Login</a>
+    <?php } else { ?>
+      <form action="login.php" method="POST">
+        <input type="hidden" name="logout" />
+        <input type="submit" value="Logout"/>
+      </form>
+    <?php } ?>
+
     <?php if ($_SESSION['loggedIn'] == true) { 
       echo "<a href=\"preferences.php\">Preferences</a>";
     } else { } ?>
