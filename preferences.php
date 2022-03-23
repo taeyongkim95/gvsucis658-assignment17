@@ -1,9 +1,9 @@
 <?php
-  if (isset($_POST['display']) && isset($_POST['display'])) {
+  if (isset($_POST['display'])) {
     if ($_POST['display'] == "light") {
-      $_COOKIE["displayMode"] == "light"
+      $_COOKIE["displayMode"] = "light";
     } else {
-      $_COOKIE["displayMode"] == "dark"
+      $_COOKIE["displayMode"] = "dark";
     }
   }
 

@@ -16,11 +16,12 @@ header a {
 
 input[type=submit] {
   border: 2px solid black;
-  padding: 1rem 2rem;
+  padding: 1.2rem 2rem;
   text-decoration: none;
   background: black;
   color: white;
   margin:0 1rem;
+  cursor: pointer;
 }
 
 h1 {
