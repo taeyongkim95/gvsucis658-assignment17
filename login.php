@@ -3,7 +3,10 @@
 
   if (isset($_POST['username']) && isset($_POST['password'])) {
     if ($_POST['username'] == "CIS658" && $_POST['password'] == "WebArchitectures") {
+      $correctLogin = true;
       $_SESSION['loggedIn'] = true;
+    } else {
+      $correctLogin = false;
     }
   }
 
@@ -52,6 +55,10 @@
       echo "<a href=\"preferences.php\">Preferences</a>";
     } else { } ?>
   </header>
+
+  <?php if ( $correctLogin == false ) {
+    echo "<h1>Wrong Login information entered</h1>";
+  }?>
 
   <?php if ($_SESSION['loggedIn'] == false) { ?>
     <form action="login.php" method="POST">
