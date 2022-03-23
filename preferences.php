@@ -1,6 +1,6 @@
 <?php
-  if (isset($_POST['display-mode']) && isset($_POST['display-mode'])) {
-    if ($_POST['display-mode'] == "light") {
+  if (isset($_POST['display']) && isset($_POST['display'])) {
+    if ($_POST['display'] == "light") {
       $_COOKIE["displayMode"] == "light"
     } else {
       $_COOKIE["displayMode"] == "dark"
@@ -53,7 +53,7 @@
     <h1>You must be logged in to access this content</h1>
   <?php } else { ?>
     <form action="preferences.php" method="POST">
-      <select name="display-mode">
+      <select name="display">
         <option value="light">Light</option>
         <option value="dark">Dark</option>  
       </select>
