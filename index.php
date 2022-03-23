@@ -1,7 +1,7 @@
 <?php
   session_start();
 
-  $_SESSION['loggedIn'] = true;
+  $_SESSION['loggedIn'] = false;
   
   $displayMode = "light";
   $displayModeCookieName = "Display Mode";

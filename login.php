@@ -1,3 +1,7 @@
+<?php
+  session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,8 +14,16 @@
 <body>
   <header>
     <a href="index.php">Home</a>
-    <a href="login.php">Login</a>
-    <a href="preferences.php">Preferences</a>
+    <a href="login.php">
+      <?php if ($_SESSION['loggedIn'] == false ) {
+        echo "Login";
+      } else {
+        echo "Logout";
+      }?>
+    </a>
+    <?php if ($_SESSION['loggedIn'] == true) { 
+      echo "<a href=\"preferences.php\">Preferences</a>";
+    } else { } ?>
   </header>
 </body>
 
