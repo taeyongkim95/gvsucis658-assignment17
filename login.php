@@ -57,7 +57,9 @@
   </header>
 
   <?php if ( $correctLogin == false ) {
-    echo "<h1>Wrong Login information entered</h1>";
+    echo "<h1>Wrong login information entered</h1>";
+  } else {
+    echo "<h1>You are currently Logged in</h1>";
   }?>
 
   <?php if ($_SESSION['loggedIn'] == false) { ?>
