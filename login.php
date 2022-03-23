@@ -7,6 +7,10 @@
     }
   }
 
+  if (isset($_POST['logout']) && isset($_POST['logout'])) {
+    $_SESSION['loggedIn'] = false;
+  }
+
   if (!isset($_COOKIE["displayMode"]) || $_COOKIE["displayMode"] == "light") {
     $backGroundColor = "#eee";
     $textColor = "#000";
@@ -34,13 +38,16 @@
 <body>
   <header>
     <a href="index.php">Home</a>
-    <a href="login.php">
-      <?php if ($_SESSION['loggedIn'] == false ) {
-        echo "Login";
-      } else {
-        echo "Logout";
-      }?>
-    </a>
+      
+    <?php if ($_SESSION['loggedIn'] == false ) { ?>   
+      <a href="login.php">Login</a>
+    <?php } else { ?>
+      <form action="login.php" method="POST">
+        <input type="hidden" name="logout" />
+        <input type="submit" value="Logout"/>
+      </form>
+    <?php } ?>
+
     <?php if ($_SESSION['loggedIn'] == true) { 
       echo "<a href=\"preferences.php\">Preferences</a>";
     } else { } ?>
@@ -53,7 +60,6 @@
       <input type="submit" />
     </form>
   <?php } else { ?>
-
   <?php } ?>
 </body>
 
