@@ -9,6 +9,12 @@
   <meta charset="utf-8">
   <title>Assignment 17 - Login</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background: <?php echo $backGroundColor;?>;
+      color: <?php echo $textColor;?>;
+    }
+  </style>
 </head>
 
 <body>
@@ -25,6 +31,16 @@
       echo "<a href=\"preferences.php\">Preferences</a>";
     } else { } ?>
   </header>
+
+  <?php if ($_SESSION['loggedIn'] == false) { ?>
+    <form>
+      <input type="text" name="username" placeholder="User Name"/>
+      <input type="text" name="password" placeholder="Password"/>
+      <input type="submit" />
+    </form>
+  <?php } else { ?>
+    
+  <?php } ?>
 </body>
 
 </html>

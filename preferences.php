@@ -5,6 +5,12 @@
   <meta charset="utf-8">
   <title>Assignment 17 - Preferences</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background: <?php echo $backGroundColor;?>;
+      color: <?php echo $textColor;?>;
+    }
+  </style>
 </head>
 
 <body>
