@@ -19,13 +19,11 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="
   <?php if (!isset($_COOKIE["displayMode"]) || $_COOKIE["displayMode"] == "light") {
-    echo "light-mode";
+    echo "<body class=\"light-mode\">";
   } else {
-    echo "dark-mode";
+    echo "<body class=\"dark-mode\">";
   }?>
-">
 
   <header>
     <a href="index.php">Home</a>
