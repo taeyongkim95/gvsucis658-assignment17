@@ -4,8 +4,10 @@
   if (isset($_POST['display'])) {
     if ($_POST['display'] == "light") {
       setcookie("displayMode", "light", time() + (86400 * 3), "/");
+      header("Refresh:0"); 
     } else {
       setcookie("displayMode", "dark", time() + (86400 * 3), "/");
+      header("Refresh:0"); 
     }
   }
 ?>
@@ -44,7 +46,7 @@
   <?php if ($_SESSION['loggedIn'] == false) { ?>
     <h1>You must be logged in to access this content</h1>
   <?php } else { ?>
-    <form action="preferences.php" method="POST" onsubmit="setTimeout(function(){window.location.reload();},10);">
+    <form action="preferences.php" method="POST">
       <select name="display">
         <option value="light">Light</option>
         <option value="dark">Dark</option>  
