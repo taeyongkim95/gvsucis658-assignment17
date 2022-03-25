@@ -19,13 +19,11 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="
-  <?php if (!isset($_COOKIE["displayMode"]) || $_COOKIE["displayMode"] == "light") {
-    echo "light-mode";
+<?php if (!isset($_COOKIE["displayMode"]) || $_COOKIE["displayMode"] == "light") {
+    echo "<body class=\"light-mode\">";
   } else {
-    echo "dark-mode";
-  }?>
-">
+    echo "<body class=\"dark-mode\">";
+}?>
   <header>
     <a href="index.php">Home</a>
       
@@ -46,7 +44,7 @@
   <?php if ($_SESSION['loggedIn'] == false) { ?>
     <h1>You must be logged in to access this content</h1>
   <?php } else { ?>
-    <form action="preferences.php" method="POST">
+    <form action="preferences.php" method="POST" onsubmit="setTimeout(function(){window.location.reload();},10);">
       <select name="display">
         <option value="light">Light</option>
         <option value="dark">Dark</option>  
